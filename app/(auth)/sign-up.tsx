@@ -4,6 +4,7 @@ import { icons, images } from "@/constants";
 import InputField from "@/components/InputField";
 import CustomButton from "@/components/CustomButton";
 import { Link } from "expo-router";
+import OAuth from "@/components/OAuth";
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -54,9 +55,11 @@ const SignUp = () => {
             className="mt-6"
           />
 
+          <OAuth />
+
           <Link
             href="/sign-in"
-            className="text-lg text-center text-general-200 mt-10"
+            className="text-lg text-center text-general-200 mt-2"
           >
             <Text className="">Already have an account? </Text>
             <Text className="text-primary-500">Log In</Text>
