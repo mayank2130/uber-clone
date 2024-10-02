@@ -19,16 +19,29 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.yourcompany.uber"
     },
     "web": {
       "bundler": "metro",
       "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": [["expo-router", { "origin": "https://uber.com/" }]],
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://uber.com/"
+        }
+      ]
+    ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "67b17094-3c33-4d4b-9cf9-b346e96bc1eb"
+      }
     }
   }
 }
