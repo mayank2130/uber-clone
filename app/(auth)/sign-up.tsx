@@ -38,8 +38,6 @@ const SignUp = () => {
         state: "pending",
       });
     } catch (err: any) {
-      // See https://clerk.com/docs/custom-flows/error-handling
-      // for more info on error handling
       console.log(JSON.stringify(err, null, 2));
       Alert.alert("Error", err.errors[0].longMessage);
     }
@@ -72,8 +70,6 @@ const SignUp = () => {
         });
       }
     } catch (err: any) {
-      // See https://clerk.com/docs/custom-flows/error-handling
-      // for more info on error handling
       setVerification({
         ...verification,
         error: err.errors[0].longMessage,
@@ -84,13 +80,13 @@ const SignUp = () => {
   return (
     <ScrollView className="flex-1 bg-white">
       <View className="flex-1 bg-white">
-        <View className="relative w-full h-[250px]">
-          <Image source={images.signUpCar} className="z-0 w-full h-[250px]" />
+        <View className="relative w-full h-[230px]">
+          <Image source={images.signUpCar} className="z-0 w-full h-[230px]" />
           <Text className="text-2xl text-black font-JakartaSemiBold absolute bottom-5 left-5">
             Create Your Account
           </Text>
         </View>
-        <View className="p-5">
+        <View className="p-5 py-0">
           <InputField
             label="Name"
             placeholder="Enter name"
@@ -118,12 +114,12 @@ const SignUp = () => {
           <CustomButton
             title="Sign Up"
             onPress={onSignUpPress}
-            className="mt-6"
+            className="mt-3"
           />
           <OAuth />
           <Link
             href="/sign-in"
-            className="text-lg text-center text-general-200 mt-10"
+            className="text-lg text-center text-general-200"
           >
             Already have an account?{" "}
             <Text className="text-primary-500">Log In</Text>
